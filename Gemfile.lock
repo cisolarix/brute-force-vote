@@ -43,7 +43,6 @@ GEM
     byebug (9.0.5)
     concurrent-ruby (1.0.2)
     connection_pool (2.2.0)
-    database_cleaner (1.5.1)
     debug_inspector (0.0.2)
     erubis (2.7.0)
     globalid (0.3.6)
@@ -120,7 +119,6 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  database_cleaner
   mysql2 (>= 0.3.13, < 0.5)
   rails (= 4.2.6)
   rest-client

@@ -1,5 +1,3 @@
-Ip.unavailable.destroy_all
-
 file = Rails.root.join('db', 'ip.txt')
 
 File.open(file, 'r') do |f|
