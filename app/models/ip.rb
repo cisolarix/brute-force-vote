@@ -1,9 +1,5 @@
 class Ip < ActiveRecord::Base
-  scope :available, proc {
-    where(used: false)
-  }
-
   scope :unavailable, proc {
-    where(used: true)
+    where('failed_count >= 10 AND success_count < failed_count')
   }
 end
