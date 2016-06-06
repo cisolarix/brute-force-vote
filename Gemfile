@@ -6,6 +6,7 @@ gem 'mysql2', '>= 0.3.13', '< 0.5'
 
 gem 'sidekiq'
 gem 'rest-client'
+gem 'whenever'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
