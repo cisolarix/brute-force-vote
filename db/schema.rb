@@ -11,15 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160606031312) do
+ActiveRecord::Schema.define(version: 20160606111619) do
 
   create_table "ips", force: :cascade do |t|
-    t.string   "address",       limit: 255,                 null: false
-    t.boolean  "used",                      default: false
-    t.datetime "created_at",                                null: false
-    t.datetime "updated_at",                                null: false
+    t.string   "address",       limit: 255,             null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.integer  "failed_count",  limit: 4,   default: 0
     t.integer  "success_count", limit: 4,   default: 0
+    t.integer  "diff",          limit: 4,   default: 0
   end
 
 end
