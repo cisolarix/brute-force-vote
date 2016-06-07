@@ -8,10 +8,10 @@ namespace :vote do
 
   desc '定时任务'
   task dingshi: :environment do
-    Ip.where('failed_count > 4 AND success_count = 0').destroy_all
-    Ip.where('failed_count >= 10 AND success_count < failed_count').destroy_all
+    Ip.where('failed_count >= 3 AND success_count = 0').destroy_all
+    Ip.where('failed_count >= 6 AND success_count < failed_count').destroy_all
     require 'sidekiq/api'
     address_queue = Sidekiq::Queue.new('address')
-    Rake::Task['vote:lj'].invoke if address_queue.size == 0
+    Rake::Task['vote:lj'].invoke if address_queue.size < 50
   end
 end
