@@ -2,7 +2,7 @@ namespace :ip do
   desc "快代理"
   task kuaidaili: :environment do
     next if Ip.count > 500
-    url = 'http://dev.kuaidaili.com/api/getproxy?orderid=916530213383118&num=234'
+    url = 'http://dev.kuaidaili.com/api/getproxy?orderid=916530213383118&num=234&dedup=1'
     response = RestClient.get(url)
     puts '*' * 120
     puts '「快代理」返回的数据：'
@@ -18,7 +18,7 @@ namespace :ip do
   desc "代理666"
   task daili666: :environment do
     next if Ip.count > 500
-    url = 'http://qsrdk.daili666api.com/ip?tid=557988298627683&num=235'
+    url = 'http://qsrdk.daili666api.com/ip?tid=557988298627683&num=235&filter=on'
     response = RestClient.get(url)
     puts '*' * 120
     puts '「代理666」返回的数据：'
