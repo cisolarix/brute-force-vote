@@ -6,6 +6,8 @@
 # Example:
 
 env :PATH, ENV['PATH']
+
+# 此处需填写真实的路径
 set :output,
     error:    '/Users/dengyanming/Desktop/error.log',
     standard: '/Users/dengyanming/Desktop/standard.log'
