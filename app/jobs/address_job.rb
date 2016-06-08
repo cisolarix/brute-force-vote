@@ -19,7 +19,7 @@ class AddressJob < ActiveJob::Base
         puts '*' * 100
       end
     rescue => e
-      # puts e.inspect
+      puts e.inspect
       puts '有异常发生'.colorize(:red)
       ip.increment :failed_count
       ip.save
