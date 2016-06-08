@@ -3,8 +3,8 @@ namespace :db do
   task clean: :environment do
     puts
     puts "```````````````````开始清理数据库```````````````````"
-    Ip.where('failed_count > 4 AND success_count = 0').destroy_all
-    Ip.where('failed_count >= 10 AND success_count < failed_count').destroy_all
+    Ip.where('failed_count >= 3 AND success_count = 0').destroy_all
+    Ip.where('failed_count >= 6 AND success_count < failed_count').destroy_all
     puts "```````````````````完成清理数据库```````````````````"
   end
 end
